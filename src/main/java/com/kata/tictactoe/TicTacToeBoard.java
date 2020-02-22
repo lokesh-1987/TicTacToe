@@ -15,11 +15,11 @@ class TicTacToeBoard {
                 {' ', '|', ' ', '|', ' '}};
     }
 
-    public void setValue(int row, int col, char value) {
+    void setValue(int row, int col, char value) {
         this.board[row][col] = value;
     }
 
-    public char getValue(int row, int col) {
+    char getValue(int row, int col) {
         return this.board[row][col];
     }
 }
