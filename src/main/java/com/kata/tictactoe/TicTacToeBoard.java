@@ -22,4 +22,8 @@ class TicTacToeBoard {
     char getValue(int row, int col) {
         return this.board[row][col];
     }
+
+    public boolean isInvalidPosition(int row, int col) {
+        return getValue(row, col) == 'X' || getValue(row, col) == '0';
+    }
 }
