@@ -9,9 +9,11 @@ import static org.junit.Assert.assertThat;
 
 public class TicTacToeBoardTest {
 
+    private static final int FIVE = 5;
+
     @Test
     public void ticTacToeBoardShouldReturnRowLength5AfterInitialization(){
         TicTacToeBoard ticTacToeBoard = new TicTacToeBoard();
-        assertThat(ticTacToeBoard.board.length, is(5));
+        assertThat(ticTacToeBoard.board.length, is(FIVE));
     }
 }
