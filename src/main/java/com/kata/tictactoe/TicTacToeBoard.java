@@ -1,5 +1,5 @@
 package com.kata.tictactoe;
 
-public class TicTacToeBoard {
-    public char[][] board = new char[5][5];
+class TicTacToeBoard {
+    char[][] board = new char[5][5];
 }
