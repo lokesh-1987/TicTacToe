@@ -7,7 +7,7 @@ class TicTacToeBoard {
         board = new char[5][5];
     }
 
-    public void setUpBoard() {
+    void setUpBoard() {
         this.board = new char[][]{{' ', '|', ' ', '|', ' '},
                 {'-', '+', '-', '+', '-'},
                 {' ', '|', ' ', '|', ' '},
