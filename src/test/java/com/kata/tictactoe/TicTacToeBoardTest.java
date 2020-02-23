@@ -4,9 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.assertThat;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class TicTacToeBoardTest {
 
@@ -64,7 +62,7 @@ public class TicTacToeBoardTest {
     }
 
     @Test
-    public void ticTacToeBoardShouldReturnTrueIfEitherOfColumnssAreFull() {
+    public void ticTacToeBoardShouldReturnTrueIfEitherOfColumnsAreFull() {
         ticTacToeBoard.setValue(0,0,'0');
         ticTacToeBoard.setValue(2,0,'0');
         ticTacToeBoard.setValue(4,0,'0');
@@ -77,5 +75,12 @@ public class TicTacToeBoardTest {
         ticTacToeBoard.setValue(2,2,'X');
         ticTacToeBoard.setValue(4,0,'X');
         assertTrue(ticTacToeBoard.hasFullDiagonalOfEitherXOr0('X'));
+    }
+
+    @Test
+    public void ticTacToeBoardShouldReturnFalseIfEitherOfRowsAreNotFull() {
+        ticTacToeBoard.setValue(2,0,'0');
+        ticTacToeBoard.setValue(2,4,'0');
+        assertFalse(ticTacToeBoard.hasFullRowOfEitherXOr0('0'));
     }
 }
