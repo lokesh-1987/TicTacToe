@@ -24,7 +24,15 @@ class TicTacToeBoard {
     }
 
     boolean isInvalidPosition(int row, int col) {
-        return isRowAndColOutOfDefinedDimension(row, col) || isPositionAlreadyOccupied(row, col);
+        return isRowAndColOutOfDefinedDimension(row, col)
+                || isPositionAlreadyOccupied(row, col)
+                || isPlusMinusAndPipeSymbolsUsedWhileSetUpBoard(row, col);
+    }
+
+    private boolean isPlusMinusAndPipeSymbolsUsedWhileSetUpBoard(int row, int col) {
+        return getValue(row, col) == '+'
+                || getValue(row, col) == '-'
+                || getValue(row, col) == '|';
     }
 
     private boolean isRowAndColOutOfDefinedDimension(int row, int col) {
