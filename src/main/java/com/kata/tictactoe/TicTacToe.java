@@ -5,6 +5,8 @@ class TicTacToe {
     private static final String GAME_IS_CONTINUE = "Game is Continue!";
     private static final String GAME_IS_DRAW = "Game is draw!";
     private static final String INVALID_POSITION = "Invalid Position";
+    private static final String PLAYER = "Player ";
+    private static final String WON = " Won!";
     private TicTacToeBoard ticTacToeBoard = new TicTacToeBoard();
 
     String playTicTacToeGame(int row, int col, char player) {
@@ -15,7 +17,7 @@ class TicTacToe {
         if(ticTacToeBoard.isBoardFull()) {
             return GAME_IS_DRAW;
         } else if (ticTacToeBoard.hasFullRowOfEitherXOr0(player)) {
-            return "Player "+player+" Won!";
+            return PLAYER +player+ WON;
         }
         return GAME_IS_CONTINUE;
     }
