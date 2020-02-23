@@ -16,11 +16,15 @@ class TicTacToe {
         ticTacToeBoard.setValue(row, col, player);
         if(ticTacToeBoard.isBoardFull()) {
             return GAME_IS_DRAW;
-        } else if (ticTacToeBoard.hasFullRowOfEitherXOr0(player)
-                || ticTacToeBoard.hasFullColumnOfEitherXOr0(player)
-                || ticTacToeBoard.hasFullDiagonalOfEitherXOr0(player)) {
+        } else if (isGameWonByEitherPlayer(player)) {
             return PLAYER +player+ WON;
         }
         return GAME_IS_CONTINUE;
+    }
+
+    private boolean isGameWonByEitherPlayer(char player) {
+        return ticTacToeBoard.hasFullRowOfEitherXOr0(player)
+                || ticTacToeBoard.hasFullColumnOfEitherXOr0(player)
+                || ticTacToeBoard.hasFullDiagonalOfEitherXOr0(player);
     }
 }
