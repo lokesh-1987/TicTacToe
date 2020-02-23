@@ -124,4 +124,13 @@ public class TicTacToeBoardTest {
         ticTacToeBoard.setValue(4,4,'0');
         assertFalse(ticTacToeBoard.isBoardFull());
     }
+
+    @Test
+    public void ticTacToeBoardShouldBeDisplayedAfterEachMove() {
+        ticTacToeBoard.setUpBoard();
+        ticTacToeBoard.displayBoard();
+        ticTacToeBoard.setValue(0,0,'X');
+        ticTacToeBoard.displayBoard();
+        assertThat(ticTacToeBoard.getValue(0,0), is('X'));
+    }
 }
