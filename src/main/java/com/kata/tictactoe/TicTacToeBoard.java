@@ -63,7 +63,7 @@ class TicTacToeBoard {
         return true;
     }
 
-    public void displayBoard() {
+    void displayBoard() {
         for (char[] row : this.board){
             for (char c : row) {
                 System.out.print(c);
