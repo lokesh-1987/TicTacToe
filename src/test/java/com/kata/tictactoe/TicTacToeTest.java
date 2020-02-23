@@ -47,4 +47,9 @@ public class TicTacToeTest {
         assertThat(ticTacToe.playTicTacToeGame(0,2,'X'), is(GAME_IS_CONTINUE));
         assertThat(ticTacToe.playTicTacToeGame(0,2,'0'), is(INVALID_POSITION));
     }
+
+    @Test
+    public void ticTacToeShouldReturn_InvalidPositionMessage_IfPosition_6_2_EnteredByEitherPlayerIsOutOfDefinedDimension() {
+        assertThat(ticTacToe.playTicTacToeGame(6,2,'0'), is(INVALID_POSITION));
+    }
 }
