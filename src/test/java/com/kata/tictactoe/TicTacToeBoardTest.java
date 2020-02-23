@@ -133,4 +133,9 @@ public class TicTacToeBoardTest {
         ticTacToeBoard.displayBoard();
         assertThat(ticTacToeBoard.getValue(0,0), is('X'));
     }
+
+    @Test
+    public void ticTacToeBoardShouldReturnFalseIfPositionIsNotOccupied() {
+        assertFalse(ticTacToeBoard.isInvalidPosition(0, 4));
+    }
 }
