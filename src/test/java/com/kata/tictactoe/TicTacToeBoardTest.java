@@ -49,4 +49,9 @@ public class TicTacToeBoardTest {
         ticTacToeBoard.setValue(0,4,'X');
         assertTrue(ticTacToeBoard.isInvalidPosition(0, 4));
     }
+
+    @Test
+    public void ticTacToeBoardShouldReturnTrueIfRowAndColOutOfDefinedDimension() {
+        assertTrue(ticTacToeBoard.isInvalidPosition(1, 6));
+    }
 }
