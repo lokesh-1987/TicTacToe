@@ -138,4 +138,9 @@ public class TicTacToeBoardTest {
     public void ticTacToeBoardShouldReturnFalseIfPositionIsNotOccupied() {
         assertFalse(ticTacToeBoard.isInvalidPosition(0, 4));
     }
+
+    @Test
+    public void ticTacToeBoardShouldReturnFalseIfRowAndColAreNotOutOfDefinedDimension() {
+        assertFalse(ticTacToeBoard.isInvalidPosition(1, 4));
+    }
 }
