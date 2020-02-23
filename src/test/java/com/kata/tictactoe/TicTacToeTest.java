@@ -10,6 +10,7 @@ public class TicTacToeTest {
 
     private static final String GAME_IS_CONTINUE = "Game is Continue!";
     private static final String GAME_IS_DRAW = "Game is draw!";
+    private static final String INVALID_POSITION = "Invalid Position";
     private TicTacToe ticTacToe;
 
     @Before
@@ -44,6 +45,6 @@ public class TicTacToeTest {
     @Test
     public void ticTacToeShouldReturn_InvalidPositionMessage_IfEitherPlayerPlaysOnOccupiedPosition() {
         assertThat(ticTacToe.playTicTacToeGame(0,2,'X'), is(GAME_IS_CONTINUE));
-        assertThat(ticTacToe.playTicTacToeGame(0,2,'0'), is("Invalid Position"));
+        assertThat(ticTacToe.playTicTacToeGame(0,2,'0'), is(INVALID_POSITION));
     }
 }
