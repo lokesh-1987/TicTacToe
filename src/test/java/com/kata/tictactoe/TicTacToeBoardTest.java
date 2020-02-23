@@ -54,4 +54,12 @@ public class TicTacToeBoardTest {
     public void ticTacToeBoardShouldReturnTrueIfRowAndColOutOfDefinedDimension() {
         assertTrue(ticTacToeBoard.isInvalidPosition(1, 6));
     }
+
+    @Test
+    public void ticTacToeBoardShouldReturnTrueIfEitherOfRowsAreFull() {
+        ticTacToeBoard.setValue(2,0,'0');
+        ticTacToeBoard.setValue(2,2,'0');
+        ticTacToeBoard.setValue(2,4,'0');
+        assertTrue(ticTacToeBoard.hasFullRowOfEitherXOr0('0'));
+    }
 }
