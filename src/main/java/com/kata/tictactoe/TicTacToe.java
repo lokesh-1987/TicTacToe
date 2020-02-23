@@ -7,6 +7,9 @@ class TicTacToe {
     private TicTacToeBoard ticTacToeBoard = new TicTacToeBoard();
 
     String playTicTacToeGame(int row, int col, char player) {
+        if(ticTacToeBoard.isInvalidPosition(row,col)){
+            return "Invalid Position";
+        }
         ticTacToeBoard.setValue(row, col, player);
         if(ticTacToeBoard.isBoardFull()) {
             return GAME_IS_DRAW;
