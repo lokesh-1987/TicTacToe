@@ -1,8 +1,9 @@
 package com.kata.tictactoe;
 
-import org.hamcrest.core.Is;
-import org.junit.Assert;
 import org.junit.Test;
+
+import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertThat;
 
 public class TicTacToeTest {
 
@@ -11,6 +12,6 @@ public class TicTacToeTest {
     @Test
     public void ticTacToeShouldReturn_ContinueMessage_IfPlayer_X_MovesOn_0_0_Position() {
         TicTacToe ticTacToe = new TicTacToe();
-        Assert.assertThat(ticTacToe.playTicTacToeGame(0,0,'X'), Is.is(GAME_IS_CONTINUE));
+        assertThat(ticTacToe.playTicTacToeGame(0,0,'X'), is(GAME_IS_CONTINUE));
     }
 }
