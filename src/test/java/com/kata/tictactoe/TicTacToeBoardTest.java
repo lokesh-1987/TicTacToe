@@ -62,4 +62,12 @@ public class TicTacToeBoardTest {
         ticTacToeBoard.setValue(2,4,'0');
         assertTrue(ticTacToeBoard.hasFullRowOfEitherXOr0('0'));
     }
+
+    @Test
+    public void ticTacToeBoardShouldReturnTrueIfEitherOfColumnssAreFull() {
+        ticTacToeBoard.setValue(0,0,'0');
+        ticTacToeBoard.setValue(2,0,'0');
+        ticTacToeBoard.setValue(4,0,'0');
+        assertTrue(ticTacToeBoard.hasFullColumnOfEitherXOr0('0'));
+    }
 }

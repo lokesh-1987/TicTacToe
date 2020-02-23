@@ -40,4 +40,10 @@ class TicTacToeBoard {
                 || (getValue(2,0) == value  && getValue(2,2) == value && getValue(2,4) == value)
                 || (getValue(4,0) == value  && getValue(4,2) == value && getValue(4,4) == value));
     }
+
+    public boolean hasFullColumnOfEitherXOr0(char value) {
+        return ((getValue(0,0) == value && getValue(2,0) == value && getValue(4,0) == value)
+                || (getValue(0,2) == value  && getValue(2,2) == value && getValue(4,2) == value)
+                || (getValue(0,4) == value  && getValue(2,4) == value && getValue(4,4) == value));
+    }
 }
