@@ -51,4 +51,15 @@ class TicTacToeBoard {
         return ((getValue(0,0) == value && getValue(2,2) == value && getValue(4,4) == value)
                 || (getValue(0,4) == value  && getValue(2,2) == value && getValue(4,0) == value));
     }
+
+    public boolean isBoardFull() {
+        for (int i = 0; i < board.length; i+=2) {
+            for (int j = 0; j < board[i].length; j+=2) {
+                if (getValue(i, j) != 'X' && getValue(i, j) != '0') {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
 }
