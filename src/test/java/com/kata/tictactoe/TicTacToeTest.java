@@ -11,6 +11,7 @@ public class TicTacToeTest {
     private static final String GAME_IS_CONTINUE = "Game is Continue!";
     private static final String GAME_IS_DRAW = "Game is draw!";
     private static final String INVALID_POSITION = "Invalid Position";
+    private static final String PLAYER_X_WON = "Player X Won!";
     private TicTacToe ticTacToe;
 
     @Before
@@ -59,6 +60,6 @@ public class TicTacToeTest {
         assertThat(ticTacToe.playTicTacToeGame(2,2,'0'), is(GAME_IS_CONTINUE));
         assertThat(ticTacToe.playTicTacToeGame(0,4,'X'), is(GAME_IS_CONTINUE));
         assertThat(ticTacToe.playTicTacToeGame(2,0,'0'), is(GAME_IS_CONTINUE));
-        assertThat(ticTacToe.playTicTacToeGame(0,2,'X'), is("Player X Won!"));
+        assertThat(ticTacToe.playTicTacToeGame(0,2,'X'), is(PLAYER_X_WON));
     }
 }
