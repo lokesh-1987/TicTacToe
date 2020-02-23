@@ -111,4 +111,17 @@ public class TicTacToeBoardTest {
         ticTacToeBoard.setValue(4,4,'0');
         assertTrue(ticTacToeBoard.isBoardFull());
     }
+
+    @Test
+    public void ticTacToeBoardShouldReturnFalseIfNotFull() {
+        ticTacToeBoard.setValue(0,0,'0');
+        ticTacToeBoard.setValue(0,2,'0');
+        ticTacToeBoard.setValue(0,4,'0');
+        ticTacToeBoard.setValue(2,0,'0');
+        ticTacToeBoard.setValue(2,2,'0');
+        ticTacToeBoard.setValue(4,0,'0');
+        ticTacToeBoard.setValue(4,2,'0');
+        ticTacToeBoard.setValue(4,4,'0');
+        assertFalse(ticTacToeBoard.isBoardFull());
+    }
 }
