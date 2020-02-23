@@ -73,4 +73,13 @@ public class TicTacToeTest {
         assertThat(ticTacToe.playTicTacToeGame(2,4,'X'), is(GAME_IS_CONTINUE));
         assertThat(ticTacToe.playTicTacToeGame(4,4,'0'), is(PLAYER_0_WON));
     }
+
+    @Test
+    public void ticTacToeShouldReturn_WinningMessage_IfPlayerXCompletesMidRow() {
+        assertThat(ticTacToe.playTicTacToeGame(2,0,'X'), is(GAME_IS_CONTINUE));
+        assertThat(ticTacToe.playTicTacToeGame(4,2,'0'), is(GAME_IS_CONTINUE));
+        assertThat(ticTacToe.playTicTacToeGame(2,4,'X'), is(GAME_IS_CONTINUE));
+        assertThat(ticTacToe.playTicTacToeGame(4,0,'0'), is(GAME_IS_CONTINUE));
+        assertThat(ticTacToe.playTicTacToeGame(2,2,'X'), is(PLAYER_X_WON));
+    }
 }
