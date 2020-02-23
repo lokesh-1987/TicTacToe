@@ -24,7 +24,11 @@ class TicTacToeBoard {
     }
 
     boolean isInvalidPosition(int row, int col) {
-        return (row < 0 || row > 4) || (col < 0 || col > 4) || isPositionAlreadyOccupied(row, col);
+        return isRowAndColOutOfDefinedDimension(row, col) || isPositionAlreadyOccupied(row, col);
+    }
+
+    private boolean isRowAndColOutOfDefinedDimension(int row, int col) {
+        return (row < 0 || row > 4) || (col < 0 || col > 4);
     }
 
     private boolean isPositionAlreadyOccupied(int row, int col) {
