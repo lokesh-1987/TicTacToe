@@ -35,7 +35,7 @@ class TicTacToeBoard {
         return getValue(row, col) == 'X' || getValue(row, col) == '0';
     }
 
-    public boolean hasFullRowOfEitherXOr0(char value) {
+    boolean hasFullRowOfEitherXOr0(char value) {
         return ((getValue(0,0) == value && getValue(0,2) == value && getValue(0,4) == value)
                 || (getValue(2,0) == value  && getValue(2,2) == value && getValue(2,4) == value)
                 || (getValue(4,0) == value  && getValue(4,2) == value && getValue(4,4) == value));
