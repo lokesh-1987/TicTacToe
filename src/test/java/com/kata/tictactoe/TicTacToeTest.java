@@ -14,4 +14,11 @@ public class TicTacToeTest {
         TicTacToe ticTacToe = new TicTacToe();
         assertThat(ticTacToe.playTicTacToeGame(0,0,'X'), is(GAME_IS_CONTINUE));
     }
+
+    @Test
+    public void ticTacToeShouldReturn_ContinueMessage_IfPlayerXGoesFirstOn_0_0_And_Player_O_Makes2ndMoveOn_0_2_Position() {
+        TicTacToe ticTacToe = new TicTacToe();
+        assertThat(ticTacToe.playTicTacToeGame(0,0,'X'), is(GAME_IS_CONTINUE));
+        assertThat(ticTacToe.playTicTacToeGame(0,2,'0'), is(GAME_IS_CONTINUE));
+    }
 }
