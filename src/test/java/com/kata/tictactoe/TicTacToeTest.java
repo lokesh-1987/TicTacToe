@@ -9,6 +9,7 @@ import static org.junit.Assert.assertThat;
 public class TicTacToeTest {
 
     private static final String GAME_IS_CONTINUE = "Game is Continue!";
+    private static final String GAME_IS_DRAW = "Game is draw!";
     private TicTacToe ticTacToe;
 
     @Before
@@ -37,6 +38,6 @@ public class TicTacToeTest {
         assertThat(ticTacToe.playTicTacToeGame(2,4,'0'), is(GAME_IS_CONTINUE));
         assertThat(ticTacToe.playTicTacToeGame(4,2,'X'), is(GAME_IS_CONTINUE));
         assertThat(ticTacToe.playTicTacToeGame(4,0,'0'), is(GAME_IS_CONTINUE));
-        assertThat(ticTacToe.playTicTacToeGame(4,4,'X'), is("Game is draw!"));
+        assertThat(ticTacToe.playTicTacToeGame(4,4,'X'), is(GAME_IS_DRAW));
     }
 }
